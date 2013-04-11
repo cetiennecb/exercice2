@@ -10,21 +10,7 @@ exercice2_1(liste){
     return longueur;
   }
 
-//Exercie 2.2 Mot le plus long dans la phrase
-exercice2_2() {
-    var sentence = 'This is a very long sentence with a lot of complicated words.';
-    var motSep = sentence.split('');
-    var longMot = "";
-    
-    for (var i = 0; i < motSep.length; i++) {
-      
-    if (motSep[i].length > longMot.length)
-      longMot = motSep[i];
-    }
-
-   print ('Le plus long mot de la phrase est:"${longMot}"');
-}
-
+//Exercice 2.2 Mot le plus long // Dans le fichier exercice2
 
 //Exercice 2.3 Afficher une liste de mots donnée dans un order aléatoire
 exercice2_3(listeMots){
@@ -46,13 +32,10 @@ exercice2_4(membresHockey){
   membresHockey.sort((a, b) => a.compareTo(b));
   print(membresHockey);
   print('');
-  print('Joueur dont le prénom commence par la lettre C:');
+  print('Joueurs dont le prénom commence par la lettre C:');
   var letter = membresHockey.where((name) => name.startsWith('C')).toList();
   print(letter);
 }
 
-//Exercice 2.5
-exercice2_5(){
-  
 
-}
+//Exercice 2.5 Les clubs et les membres // Dans le fichier exercice2

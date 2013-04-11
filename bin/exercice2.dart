@@ -11,9 +11,16 @@ part 'functions2.dart';
   }
   
 //Exercice 2.2
-  ex2_2(){
-    
-  exercice2_2();
+  ex2_2() {
+    var sentence ="il y a un mot plus long que les autres dans cette phrase incroyable";
+    var wordsSentence = sentence.split(" ");
+    var longestWord = "";
+
+    for ( var i = 0 ; i < wordsSentence.length; i++){
+      if(wordsSentence[i].length > longestWord.length )
+        longestWord = wordsSentence[i];
+    }
+    print('Le mot que nous recherchons est: "${longestWord}".');
   }
 
 //Exercice 2.3
@@ -25,7 +32,7 @@ part 'functions2.dart';
   
 //Exercice 2.4
 ex2_4(){
-  var membresHockey = ['Eric Cole ec@email.com', 
+  var membresHockey = ['Eric Cole => ec@email.com', 
                      'PK Subban => pk@email.com', 
                      'David Desharnais => dd@email.com', 
                      'Charles Coulombe => cc@email.com', 
@@ -36,19 +43,30 @@ ex2_4(){
 
 //Exercice 2.5
 ex2_5(){
-  var membresClubs = {
-               'Club de tennis':{
-               'Pierre': {'Numero': '12'},
-               'Jean': {'Numero': '1'},
-               'Jacques': {'Numero': '33'}
-               },
-               'Club de course ':{
-                 'Darth': {'Numero': '99'},
-                 'Vader': {'Numero': '66'},
-               }};
-  exercice2_5(membresClubs);
-  
-  
+  var nomsClubs = [
+                      {'club':'Loups', 'description':'quilles'},
+                      {'club':'Requins', 'description':'baseball'},
+                      {'club':'Gorilles', 'description':'hockey'},
+                    ];
+
+  List membresClubs= [{'club':'Loups', 'nom':'Charles Coulombe', 'email':'cc@jmail.com'},
+                      {'club':'Loups', 'nom':'Eric Cole', 'email':'ec@jmail.com'},
+                      {'club':'Gorilles', 'nom':'Rick Nash', 'email':'rn@jmail.com'},
+                      {'club':'Gorilles', 'nom':'PK Subban', 'email':'pk@jmail.com'},
+                      {'club':'Requins', 'nom':'David Desharnais', 'email':'dd@jmail.com'},
+                      ];
+  print(nomsClubs);
+  print('');
+  print(membresClubs);
+  print('');
+  nomsClubs.removeLast();
+  nomsClubs.add({'club':'Éléphants', 'description':'hockey'});
+  //Notre nouveau club qui remplace le club des Gorilles au hockey
+  print(nomsClubs);
+  membresClubs.add({'club':'Loups', 'nom':'Chuck Norris', 'email':'cn@jmail.com'});
+  print('');
+  //Nous ajoutons un membre dans la liste
+  print(membresClubs);
 }
 
 void main(){
@@ -68,6 +86,9 @@ void main(){
   print('');
   print('Exercice 2.5');
   ex2_5();
+  print('');
+  print('');
+  print('');
   print('');
   print('Merci et bon été!');
 }
